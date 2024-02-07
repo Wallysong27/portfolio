@@ -1,7 +1,8 @@
 import StarsCanvas from "@/components/main/StarBackground";
 import "./globals.css";
 import { Ubuntu } from "next/font/google";
-// import Navbar from "@/components/Navbar/Example";
+import Navbar from "@/components/main/Navbar";
+import Footer from "@/components/main/Footer";
 
 export const metadata = {
   title: "Wallyson Araujo",
@@ -21,9 +22,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${ubuntu.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}>
-        {/* <Navbar /> */}
         <StarsCanvas />
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
